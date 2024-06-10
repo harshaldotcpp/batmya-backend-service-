@@ -3,8 +3,11 @@ const router = express.Router();
 
 
 
+router.get("/", (req,res)=>{
+    res.send("home page");
+})
 
-router.post("/getin",(req,res) => {
+router.get("/getin",(req,res) => {
     res.render("getin");
 });
 
