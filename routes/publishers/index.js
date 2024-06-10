@@ -5,17 +5,8 @@ const router = express.Router();
 
 
 router.post("/getin",(req,res) => {
-
+    res.render("getin");
 });
 
 
-
-router.post("/signin",(req,res) => {
-
-});
-
-
-
-router.post("/signup",(req,res) => {
-
-});
+module.exports = router;
