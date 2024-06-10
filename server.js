@@ -5,8 +5,10 @@ const app = express();
 
 
 
-// view engine set to ejs
-app.set("view engine","ejs");
+//server settings
+app.use(express.static("public"));  // set static
+app.set("view engine","ejs");       // set view Engine 
+
 
 
 //importing routes
@@ -14,13 +16,14 @@ const mainRoutes = require("./routes/root");
 
 
 
+// routes declares
+app.use("/", mainRoutes)
+
+
+
 // ports and address 
 const PORT = process.env.PORT || 5500; 
 const IP = process.env.IP || "0.0.0.0";
-
-
-// routes declares
-app.use("/", mainRoutes)
 
 
 app.listen(PORT, IP, (err) =>{

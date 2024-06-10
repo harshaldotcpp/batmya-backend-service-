@@ -4,8 +4,8 @@ const router = express.Router();
 
 
 router.get("/", (req,res)=>{
-    res.send("home page");
-})
+    res.render("home");
+});
 
 router.get("/getin",(req,res) => {
     res.render("getin");
